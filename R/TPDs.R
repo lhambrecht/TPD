@@ -39,8 +39,8 @@ TPDs <- function(species, traits, samples = NULL, weight = NULL, alpha = 0.95,
   # 	1. Compute the number of dimensions (traits):
   traits <- as.matrix(traits)
   dimensions <- ncol(traits)
-  if (dimensions > 4) {
-    stop("No more than 4 dimensions are supported at this time; reduce the
+  if (dimensions > 6) {
+    stop("No more than 6 dimensions are supported at this time; reduce the
       number of dimensions")
   }
   #	2. NA's not allowed in traits & species:
