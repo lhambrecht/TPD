@@ -97,7 +97,7 @@ TPDs <- function(species, traits, samples = NULL, weight = NULL, alpha = 0.95,
   }
   #	5. Create the grid of cells in which the density function is evaluated:
   if (is.null(n_divisions)) {
-    n_divisions_choose<- c(1000, 200, 50, 25)
+    n_divisions_choose<- c(1000, 200, 50, 25, 5, 1)
     n_divisions<- n_divisions_choose[dimensions]
   }
   grid_evaluate<-list()
