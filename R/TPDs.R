@@ -161,7 +161,7 @@ TPDs <- function(species, traits, samples = NULL, weight = NULL, alpha = 0.95,
     names(results$data$pop_traits)[spi] <- unique(species_base)[spi]
   }
   if (is.null(weight)){
-    results$TPDs <- lapply(results$data$pop_traits, ks::kde(binned = F),
+    results$TPDs <- lapply(results$data$pop_traits, ks::kde, binned = F,
       eval.points=evaluation_grid)
   } else{
     for (spi in 1:length(unique(species_base))) {
